@@ -1,0 +1,126 @@
+.register-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  align-items: center; // Alineamos al centro
+}
+
+/* Estilos del formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 350px;
+  gap: 10px;
+}
+
+/* Inputs y selects con efecto Glassmorphism */
+input, select {
+  padding: 12px;
+  width: 100%;
+  height: 50px; /* Tamaño uniforme */
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.3); /* Blanco translúcido */
+  backdrop-filter: blur(10px); /* Efecto desenfoque */
+  color: #333; /* Texto oscuro */
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  outline: none;
+}
+
+/* Placeholder estilizado */
+input::placeholder, select {
+  color: #666;
+  font-weight: 400;
+}
+
+/* Efecto hover */
+input:hover, select:hover {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Efecto focus */
+input:focus, select:focus {
+  background: rgba(255, 255, 255, 0.6);
+  border: 2px solid #6a11cb; /* Borde en color morado */
+  box-shadow: 0 4px 15px rgba(106, 17, 203, 0.4);
+}
+
+/* Botones con el mismo estilo de los anteriores */
+.button-group {
+  display: flex;
+  flex-direction: column; /* Asegura que estén uno debajo del otro */
+  align-items: center; /* Centra los botones horizontalmente */
+  gap: 10px; /* Espacio entre botones */
+  width: 100%;
+}
+
+/* Estilos del botón */
+button {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 14px;
+  width: 80%; /* Botón más compacto */
+  height: 40px;
+  box-sizing: border-box;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+button.register{
+  margin-bottom: 3%;
+  margin-left: 10%;
+}
+
+/* Efecto hover */
+button:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Sin efecto de crecimiento al hacer click */
+button:active {
+  transform: none;
+}
+
+/* Botón de cancelar en color neutro */
+button.cancel {
+  background: #555;
+}
+
+button.cancel:hover {
+  background: #444;
+}
+
+.custom-snackbar {
+  background-color: rgba(0, 0, 0, 0.8) !important; /* Fondo oscuro con transparencia */
+  color: white !important;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  max-width: 300px;
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important; /* Centrarlo completamente */
+  z-index: 9999 !important;
+}

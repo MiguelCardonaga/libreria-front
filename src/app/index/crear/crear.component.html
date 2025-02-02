@@ -1,0 +1,53 @@
+
+
+<!-- Contenido -->
+<div class="dialog-content">
+  <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="titulo">Título:</label>
+      <input id="titulo" formControlName="TITULO" />
+    </div>
+
+    <div>
+      <label for="autor">Autor:</label>
+      <input id="autor" formControlName="AUTOR" />
+    </div>
+
+    <div>
+      <label for="anioPublicacion">Año de Publicación:</label>
+      <input
+      type="number"
+      id="anioPublicacion"
+      formControlName="ANIO_PUBLICACION"
+    />
+    </div>
+
+    <div>
+      <label for="genero">Género:</label>
+      <!-- SELECT para elegir Género -->
+      <select id="genero" formControlName="GENERO_ID">
+        <option value="">Seleccione un género</option>
+        <option *ngFor="let gen of generos" [value]="gen.id">
+          {{ gen.nombre }}
+        </option>
+      </select>
+    </div>
+
+    <div>
+      <label for="estado">Estado:</label>
+      <!-- SELECT para elegir Estado -->
+      <select id="estado" formControlName="ESTADO_ID">
+        <option value="">Seleccione un estado</option>
+        <option *ngFor="let est of estados" [value]="est.id">
+          {{ est.nombre }}
+        </option>
+      </select>
+    </div>
+
+    <!-- Botones al pie -->
+    <div class="dialog-actions">
+      <button type="button" (click)="cerrarDialogo()">Cancelar</button>
+      <button type="submit" [disabled]="createForm.invalid">Guardar</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,27 @@
+<ng-container>
+  <div class="container">
+    <mat-card class="card">
+      <mat-card-content>
+        <h2>Bienvenido al administrador de libros</h2>
+        <p>Elige una opción:</p>
+
+        <div class="button-group">
+          <!-- Botón para abrir el diálogo de detalles -->
+          <button mat-raised-button color="primary" (click)="abrirDialogoDetalles()">
+            Consultar libro
+          </button>
+
+
+          <button mat-raised-button color="primary" (click)="abrirModificar()">
+            Modificar estado de libro
+          </button>
+
+           <button mat-raised-button color="primary" (click)="abrirDialogoCrear()">
+              Crear libro
+            </button>
+        
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</ng-container>

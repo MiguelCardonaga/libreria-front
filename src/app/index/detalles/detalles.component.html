@@ -1,0 +1,36 @@
+<!-- Cabecera -->
+
+<!-- Contenido -->
+<div class="dialog-content">
+  <label for="searchInput">Escribe el nombre del libro:</label>
+  <input
+    id="searchInput"
+    type="text"
+    (keyup)="buscarLibro($event)"
+    placeholder="Ingrese el título del libro"
+  />
+
+  <form [formGroup]="bookForm" *ngIf="libro">
+    <div>
+      <label for="autor">Autor:</label>
+      <input id="autor" formControlName="autor" />
+    </div>
+    <div>
+      <label for="anioPublicacion">Año de Publicación:</label>
+      <input id="anioPublicacion" formControlName="anioPublicacion" />
+    </div>
+    <div>
+      <label for="generoId">Género:</label>
+      <input id="generoId" formControlName="generoId" />
+    </div>
+    <div>
+      <label for="estadoId">Estado:</label>
+      <input id="estadoId" formControlName="estadoId" />
+    </div>
+  </form>
+</div>
+
+<!-- Acciones (botones) -->
+<div class="dialog-actions">
+  <button (click)="cerrarDialogo()">Cancelar</button>
+</div>

@@ -1,0 +1,116 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+/* Estilos del formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 350px;
+  gap: 10px;
+}
+
+/* Inputs con efecto Glassmorphism */
+input {
+  padding: 12px;
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.3); /* Blanco translúcido */
+  backdrop-filter: blur(10px); /* Efecto desenfoque */
+  color: #333;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  outline: none;
+}
+
+/* Placeholder estilizado */
+input::placeholder {
+  color: #666;
+  font-weight: 400;
+}
+
+/* Efecto hover */
+input:hover {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Efecto focus */
+input:focus {
+  background: rgba(255, 255, 255, 0.6);
+  border: 2px solid #6a11cb; /* Borde en color morado */
+  box-shadow: 0 4px 15px rgba(106, 17, 203, 0.4);
+}
+
+/* Botones con el mismo diseño del register */
+button {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  width: 90%; /* Más compacto */
+  height: 40px;
+  box-sizing: border-box;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Efecto hover */
+button:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Sin efecto de crecimiento al hacer click */
+button:active {
+  transform: none;
+}
+
+/* Botón de cancelar en color neutro */
+button.cancel {
+  background: #555;
+}
+
+button.cancel:hover {
+  background: #444;
+}
+
+/* Botón específico para login */
+button.login {
+  margin-bottom: 13px;
+  margin-left: 5%;
+}
+
+/* Estilo de mensajes pequeños (errores, información) */
+small {
+  color: #ff6961;
+  font-size: 12px;
+}
+
+.loading-message {
+  font-size: 18px;
+  font-weight: bold;
+  color: #6a11cb;
+  text-align: center;
+  margin-top: 20px;
+}
+

@@ -1,0 +1,38 @@
+<div  class="container">
+  <div class="card">
+
+
+    <div *ngIf="vista !== 'register' && vista !== 'login'">
+      <h2>Bienvenido</h2>
+      <p>Elige una opción:</p>
+  
+      <div class="button-group">
+        <button (click)="mostrarLogin()">Iniciar Sesión</button>
+        <button (click)="mostrarRegister()">Registrarse</button>
+      </div>
+
+    </div>
+  
+      <div class="content">
+        <ng-container *ngIf="vista === 'login'">
+          <app-login></app-login>
+        </ng-container>
+  
+        <ng-container *ngIf="vista === 'register'">
+          <app-register></app-register>
+        </ng-container>
+
+        <div *ngIf="vista === 'register'" class="button-group">
+          <button (click)="mostrarLogin()">Iniciar Sesión</button>
+          <button (click)="mostrarIncio()">Inicio</button>
+        </div>
+
+        <div *ngIf="vista === 'login'" class="button-group">
+          <button (click)="mostrarRegister()">Registrarse</button>
+          <button (click)="mostrarIncio()">Inicio</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  

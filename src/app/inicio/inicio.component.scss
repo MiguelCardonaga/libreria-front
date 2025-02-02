@@ -1,0 +1,82 @@
+/* Fondo de la pantalla completa */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  // background: linear-gradient(135deg, #f5f7fa, #c3cfe2); // Fondo suave en tonos azulados
+  font-family: 'Poppins', sans-serif;
+  padding: 0 20px;
+}
+
+/* Caja contenedora con efecto Glassmorphism */
+.card {
+  background: rgba(255, 255, 255, 0.2); // Blanco semi-transparente
+  backdrop-filter: blur(20px); // Aumentamos el desenfoque para mejor efecto
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); // Sombra más difusa y elegante
+  text-align: center;
+  color: #333; // Color de texto oscuro para mejor contraste
+  max-width: 400px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.3); // Borde sutil para el efecto
+}
+
+/* Títulos y texto */
+h2 {
+  margin-bottom: 10px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #222; // Color más oscuro para mayor contraste
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #555; // Un gris medio para mejor legibilidad
+}
+
+/* Grupo de botones */
+.button-group {
+  display: flex;
+  flex-direction: column; /* Asegura que estén uno debajo del otro */
+  align-items: center; /* Centra los botones horizontalmente */
+  gap: 10px; /* Espacio entre botones */
+  width: 100%;
+}
+
+/* Estilos del botón */
+button {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 14px;
+  width: 80%; /* Botón más compacto */
+  height: 40px;
+  box-sizing: border-box;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Efecto hover */
+button:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Sin efecto de crecimiento al hacer click */
+button:active {
+  transform: none;
+}

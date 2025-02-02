@@ -1,1 +1,86 @@
-/* You can add global styles to this file, and also import other style files */
+/* Asegurar que el overlay se muestre correctamente */
+.cdk-overlay-container {
+    position: fixed;
+    // z-index: 1000; /* Mantenerlo sobre otros elementos */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cdk-overlay-container:empty {
+    /* Si está vacío, no ocupa nada */
+    display: none;
+  }
+
+  
+  /* Fondo oscuro semitransparente */
+//   .cdk-overlay-backdrop {
+//     position: fixed;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//     z-index: 999; /* Justo debajo del diálogo */
+//     background: rgba(0, 0, 0, 0.5);
+//     opacity: 0;
+//     transition: opacity 0.3s ease;
+//     pointer-events: auto; /* Permitir clics para cerrar el diálogo */
+//   }
+  
+  /* Asegurar que el diálogo se centre y NO bloquee clics */
+//   .cdk-overlay-pane {
+//     position: relative;
+//     box-sizing: border-box;
+//     z-index: 1001; /* Un poco más alto que el backdrop */
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     max-width: 90%;
+//     max-height: 90%;
+//     pointer-events: auto; /* Permitir clics dentro del diálogo */
+//   }
+  
+  /* Estilos del diálogo */
+//   .custom-dialog-container .mat-mdc-dialog-container {
+//     padding: 24px;
+//     border-radius: 12px;
+//     box-sizing: border-box;
+//     background: white;
+//     width: auto;
+//     min-width: 300px;
+//     max-width: 600px;
+//     height: auto;
+//     overflow: hidden;
+//     pointer-events: auto; /* Permitir clics dentro del diálogo */
+//   }
+  
+  /* Estilos del botón "Cerrar" */
+  .dialog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  /* Estilo del botón Cerrar */
+  button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    z-index: 1100 !important; /* Asegurar que esté sobre todo */
+    pointer-events: auto !important; /* Permitir clics en el botón */
+  }
+  
+  button:hover {
+    background-color: #c9302c;
+  }
+  
+ 

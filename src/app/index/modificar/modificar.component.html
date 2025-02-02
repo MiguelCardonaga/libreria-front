@@ -1,0 +1,32 @@
+
+
+<!-- Contenido -->
+<div class="dialog-content">
+    <form [formGroup]="modificarform" (ngSubmit)="onSubmit()">
+
+
+      <div>
+        <label for="titulo">Título:</label>
+        <input id="titulo" formControlName="TITULO" />
+      </div>
+  
+  
+      <div>
+        <label for="estado">Estado:</label>
+        <!-- SELECT para elegir Estado -->
+        <select id="estado" formControlName="ESTADO_ID">
+          <option value="">Seleccione un estado</option>
+          <option *ngFor="let est of estados" [value]="est.id">
+            {{ est.nombre }}
+          </option>
+        </select>
+      </div>
+  
+      <!-- Botones al pie -->
+      <div class="dialog-actions">
+        <button type="button" (click)="cerrarDialogo()">Cancelar</button>
+        <button type="submit" [disabled]="modificarform.invalid">Guardar</button>
+      </div>
+    </form>
+  </div>
+  

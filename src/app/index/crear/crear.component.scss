@@ -1,0 +1,150 @@
+.custom-backdrop {
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.custom-dialog-container {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #ccc;      /* Borde alrededor */
+  background-color: #fff;
+  overflow: hidden;            /* Evita que desborde el contenido en bordes redondeados */
+
+  /* Header del diálogo */
+  .dialog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ccc;
+    padding: 1rem;
+
+    h2 {
+      margin: 0;
+      font-size: 1.25rem;
+      color: #333;
+    }
+
+    button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 0.9rem;
+      color: #555;
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+
+  /* Contenido del diálogo (inputs, labels, etc.) */
+  .dialog-content {
+    padding: 1rem;
+
+    label {
+      display: block;          /* El label se muestra en un bloque separado */
+      margin-bottom: 0.25rem;  /* Pequeño espacio debajo del label */
+      font-weight: 600;
+    }
+
+    /* Si en este mismo diálogo hubiera un #searchInput, lo estilamos aquí */
+    #searchInput {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+
+      &:focus {
+        outline: none;
+        border-color: #1976d2;
+        box-shadow: 0 0 0 1px #1976d2;
+      }
+    }
+
+    /* Formulario principal */
+    form {
+      display: flex;
+      flex-direction: column;
+
+      /* Cada campo (label + input/select) */
+      div {
+        margin-bottom: 1rem;
+      }
+
+      label {
+        margin-top: 0; /* Ajusta si deseas separar más el label del input */
+      }
+
+      /* Estilo para los inputs */
+      input {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 0.95rem;
+        transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+        &:focus {
+          outline: none;
+          border-color: #1976d2;
+          box-shadow: 0 0 0 1px #1976d2;
+        }
+      }
+
+      /* Estilo para los selects */
+      select {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 0.95rem;
+        background-color: #fff;
+        transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+        &:focus {
+          outline: none;
+          border-color: #1976d2;
+          box-shadow: 0 0 0 1px #1976d2;
+        }
+      }
+    }
+  }
+
+  /* Sección de acciones (botones) al final del diálogo */
+  .dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid #ccc;
+    padding: 1rem;
+
+    button {
+      background-color: #1976d2;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+
+      &:hover {
+        background-color: #115293;
+      }
+
+      /* Si tienes más de un botón, los separas un poco */
+      & + button {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+
+ 
+}
+
+

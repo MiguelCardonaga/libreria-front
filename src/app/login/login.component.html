@@ -1,0 +1,25 @@
+<div class="login-container">
+  <h3>Iniciar Sesión</h3>
+
+  <form *ngIf="!isLoading" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    
+    <label>Correo Electrónico</label>
+    <input type="email" formControlName="CORREO" placeholder="Ej. correo@ejemplo.com">
+    <small *ngIf="loginForm.controls['CORREO'].invalid && loginForm.controls['CORREO'].touched">
+      Ingresa un correo válido.
+    </small>
+
+    <label>Contraseña</label>
+    <input type="password" formControlName="CONTRASENA" placeholder="Mínimo 6 caracteres">
+    <small *ngIf="loginForm.controls['CONTRASENA'].invalid && loginForm.controls['CONTRASENA'].touched">
+      La contraseña debe tener al menos 6 caracteres.
+    </small>
+
+    <button type="submit" class="login" [disabled]="loginForm.invalid">Iniciar Sesión</button>
+  </form>
+
+  <!-- ✅ Mensaje de carga mientras el login está en proceso -->
+  <div *ngIf="isLoading" class="loading-message">
+    <p>🔄 Iniciando sesión... Por favor, espera.</p>
+  </div>
+</div>
